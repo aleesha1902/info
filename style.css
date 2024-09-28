@@ -232,16 +232,16 @@ span{
   
 }
 
-/* Flexbox to arrange sections horizontally */
+
 .section-wrapper {
   display: flex;
   justify-content: space-between;
  
 }
 
-/* Individual sections */
+
 .section {
-  width: 45%; /* Each section takes up 45% of the width */
+  width: 45%; 
 }
 
 .section-wrapper h2 {
@@ -272,11 +272,12 @@ p {
   margin: 0;
 }
 
-.projects{
+
+.projects {
   background: var(--snd-bf-color);
 }
 
-.projects h2{
+.projects h2 {
   margin-bottom: 4rem;
 }
 
@@ -286,6 +287,7 @@ p {
   align-items: center;
   flex-direction: column;
   padding: 40px;
+  width: 100%;
 }
 
 .case-studies {
@@ -295,20 +297,26 @@ p {
 
 .case-study {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   background-color: #1c1c1c;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
+  
+  
+  flex-direction: column;
 }
 
 .left-panel {
-  background-image: url('background.png'); /* Use the same background for all panels or customize per panel */
+  background-image: url('background.png');
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 30px;
-  width: 60%;
+  padding: 20px;
+  width: 100%; 
 }
 
 .left-panel h1 {
@@ -325,13 +333,12 @@ p {
   width: 100%;
   margin-top: 30px;
   border-radius: 15px;
- 
 }
 
 .right-panel {
   padding: 40px;
   background-color: #252525;
-  width: 40%;
+  width: 100%; 
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -339,12 +346,12 @@ p {
 }
 
 .right-panel h1 {
-  font-size: 4rem;
+  font-size: 3rem; 
   margin-bottom: 20px;
 }
 
 .right-panel p {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 30px;
 }
@@ -357,13 +364,36 @@ p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 20%;
+  width: 100%; 
 }
 
 .right-panel button:hover {
   background-color: var(--hover-color);
 }
 
+
+@media only screen and (max-width: 768px) {
+  .case-study {
+    flex-direction: column; 
+  }
+
+  .right-panel {
+    width: 100%; 
+    padding: 20px; 
+  }
+
+  .right-panel h1 {
+    font-size: 2.5rem; 
+  }
+
+  .right-panel p {
+    font-size: 1.6rem;
+  }
+
+  .right-panel button {
+    width: 100%; 
+  }
+}
 .contact h2{
   margin-bottom: 3rem;
 }
